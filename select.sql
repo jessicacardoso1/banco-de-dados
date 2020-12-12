@@ -1,0 +1,17 @@
+select * from cidades;
+select * from proprietarios;
+select * from marcas;
+select nome from cidades;
+select nome, endereco from proprietarios;
+select idmarca, nome from marcas;
+select nome, idcidade from cidades;
+select * from cidades;
+select nome, idcidade from cidades where idcidade=1;
+select nome, idcidade from cidades where idcidade>=5;
+select nome, idmarca from marcas where idmarca between 2 and 5;
+select nome, idmarca from marcas where idmarca not between 2 and 5;
+select nome idcidade from cidades where idcidade between 1 and 5;
+select nome, idmarca from marcas where nome like "h%";
+select nome, idcidade from cidades where nome like "s%";
+select nome, idcidade from cidades where idcidade in (1,5,2,6);
+select nome, idmarca from marcas where regexp_like(nome, "[l-p].*");

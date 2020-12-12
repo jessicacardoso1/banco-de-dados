@@ -1,0 +1,11 @@
+use veiculos;
+select * from modelos order by idmarca;
+select idmarca, nome from modelos where idmarca in( 1, 05, 12, 25, 33,42) order by idmarca, nome;
+select * from infracoes;
+select datahora, count(*) from infracoes where datahora between '2009-01-01' and '2009-12-01' group by datahora;
+select AVG(velocidade), max(velocidade) from infracoes;
+select * from veiculos;
+select idmodelo, count(idmodelo) from veiculos group by idmodelo;
+select idcor, count(*) from veiculos where idcategoria = 2 group by idcor;
+select idcombustivel, count(*) from veiculos_has_combustiveis having count(*)>10;
+select idtipoinfracao, count(*) from infracoes where datahora like "2009%" group by idtipoinfracao having count(idinfracao) > 5;
